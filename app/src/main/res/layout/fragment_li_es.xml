@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="liEsVM" type="com.victriasapplication.app.modules.lies.data.viewmodel.LiEsVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnlies"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_11pxv"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyleblue_50">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearRowlies"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLies"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.76"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{liEsVM.liEsModel.txtLies}"
+                    style="@style/txtIntermedium20" tools:text="@string/lbl_li_es"/>
+                <ImageView android:id="@+id/imageQuestion"
+                    android:layout_height="@dimen/_20pxh"
+                    android:layout_marginBottom="@dimen/_4pxv"
+                    android:layout_marginStart="@dimen/_258pxh"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_width="@dimen/_20pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_question"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_question"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearLies"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_15pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStyleblue_50">
+            <View android:background="@color/gray_300"
+                android:id="@+id/lineLineTen"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_343pxh"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtQualanotad"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_82pxh"
+                android:layout_marginStart="@dimen/_82pxh"
+                android:layout_marginTop="@dimen/_210pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{liEsVM.liEsModel.txtQualanotad}"
+                style="@style/txtInterregular16" tools:text="@string/msg_qual_a_nota_d"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPuzzles"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_82pxh"
+                android:layout_marginStart="@dimen/_82pxh"
+                android:layout_marginTop="@dimen/_55pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{liEsVM.liEsModel.txtPuzzles}"
+                style="@style/txtInterregular16" tools:text="@string/lbl_puzzles"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtMinigames"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_82pxh"
+                android:layout_marginStart="@dimen/_82pxh"
+                android:layout_marginTop="@dimen/_54pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{liEsVM.liEsModel.txtMinigames}"
+                style="@style/txtInterregular16" tools:text="@string/lbl_mini_games"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
